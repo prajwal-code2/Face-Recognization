@@ -2,4 +2,3 @@ requests
 streamlit
 face-recognition
 pyttsx3
-
