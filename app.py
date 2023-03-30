@@ -5,8 +5,6 @@ import datetime
 import pyttsx3
 import pickle
 import os
-import speech_recognition as sr
-from flask import Flask, render_template
 import streamlit as st
 
 def img_to_encoding(image_path):
@@ -77,23 +75,5 @@ def recognize(image_path):
     who_is_it(image_path)
 
 
-def takeCommand():
-    r = sr.Recognizer()
-    with sr.Microphone() as source:
-        r.pause_threshold = 1
-        audio = r.listen(source)
-    try:
-        query = r.recognize_google(audio)
-        if query.lower() == "friday":
-            recognize('image.jpg')
-
-        else:
-            return query
-    except Exception as e:
-        speak("sorry sir")
-
-
 if __name__ == '__main__':
-    # while True:
-    #     query=takeCommand()
     recognize('image.jpg')
