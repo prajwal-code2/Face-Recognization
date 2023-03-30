@@ -1,4 +1,5 @@
 requests
 streamlit
+wheel
 face-recognition
 pyttsx3
