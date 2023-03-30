@@ -3,3 +3,4 @@ streamlit
 wheel
 face-recognition
 pyttsx3
+gunicorn
